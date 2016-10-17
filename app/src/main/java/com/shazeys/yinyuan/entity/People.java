@@ -11,6 +11,7 @@ public class People {
         this.ratio = ratio;
     }
 
+    //字符串对应的哈希值计算个人得分
     public int getScore(String name){
         return name.hashCode()*ratio/10;
     }
