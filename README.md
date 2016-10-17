@@ -42,10 +42,10 @@ Project的build.gradle添加如下：
 >*这个是一个严重不正经的测试姻缘的App，算法是：将名字对应hashcode按指定比例计算得到一个值，双方值相加后模100得到缘分值，这直接导致一个bug：没有100分的两个人。因为我懒得+1，所谓物极必反，0就是100,100就是0。*
 
 这个demo一共就6个类，非常的袖珍，我就逐个介绍一下了
+
 **People**：数据类，一个计算的得分的比例的int变量（ratio）；一个根据比例和哈希值计算得分的方法（getScore(String name)）；
 **Man**：继承People类，一个有参构造方法和无参默认比例构造方法；
 **Woman**：继承People类，一个有参构造方法和无参默认比例构造方法；
 **PeopleModule**：一个“包子”，里面包了四种“馅”，"包子"标注了@Module，“馅”标注了@Provides；
 **PeopleComponent**：一个“包裹”，根据需要吃的“馅”来打包“包子”，包含一个inject(MainActivity m)指定所伴随的生命周期对象。
 **MainActivity**：直接看 [代码](https://github.com/shazeys/DaggerPrimary/blob/master/app/src/main/java/com/shazeys/yinyuan/MainActivity.java)
-
