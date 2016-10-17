@@ -19,11 +19,12 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 public class MainActivity extends AppCompatActivity {
-
+//    // 不同的返回类型，直接inject就可以了
 //    @Inject
 //    Woman woman;
 //    @Inject
 //    Man man;
+    //因为下面两个类型相同，必须用named标签来区分
     @Inject @Named("nv")
     People woman;
     @Inject @Named("nan")
